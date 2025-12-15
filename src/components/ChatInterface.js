@@ -52,7 +52,7 @@ const ChatInterface = () => {
     try {
       const targetUrl = useProxy
         ? '/api/openrouter/chat'
-        : 'https://api.openrouter.ai/v1/chat/completions';
+        : 'https://openrouter.ai/api/v1/chat/completions';
 
       const headers = {
         'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ const ChatInterface = () => {
         method: 'POST',
         headers,
         body: JSON.stringify({
-          model: 'qwen/qwen2.5-vl-72b-instruct:free',
+          model: 'qwen/qwen2.5-vl-72b-instruct',
           messages: [...messages, userMessage]
         })
       });
